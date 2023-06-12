@@ -4,6 +4,7 @@ import com.example.demo.Configuration.SpringConfig;
 import com.example.demo.Models.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
@@ -13,7 +14,7 @@ import java.util.List;
 public class CController {
     @Autowired
     SpringConfig springConfig;
-    @RequestMapping("/user")
+    @RequestMapping(value = "/user")
     public List<UserInfo> getUserInfo(){
         return Arrays.asList(new UserInfo("Aayush", 28, "29-12-1995"),
                 new UserInfo("Aayush", 28, "29-12-1996"));

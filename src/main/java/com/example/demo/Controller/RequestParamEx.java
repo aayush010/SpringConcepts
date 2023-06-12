@@ -40,4 +40,9 @@ public class RequestParamEx {
         return "id : " + ids.toString();
     }
 
+    @GetMapping("/f")
+    public String handle (@org.springframework.web.bind.annotation.RequestAttribute("visitorCounter") Integer counter) {
+        return String.format("Visitor number: %d", counter);
+    }
+
 }
